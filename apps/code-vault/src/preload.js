@@ -1,0 +1,22 @@
+const { contextBridge, ipcRenderer } = require('electron');
+contextBridge.exposeInMainWorld('api', {
+  openFolder:      ()    => ipcRenderer.invoke('open-folder-dialog'),
+  scanRoot:        (p)   => ipcRenderer.invoke('scan-root', p),
+  readFile:        (p)   => ipcRenderer.invoke('read-file', p),
+  readFileBinary:  (p)   => ipcRenderer.invoke('read-file-binary', p),
+  computeStats:    (p)   => ipcRenderer.invoke('compute-stats', p),
+  searchContent:   (o)   => ipcRenderer.invoke('search-content', o),
+  loadStarred:     ()    => ipcRenderer.invoke('load-starred'),
+  saveStarred:     (d)   => ipcRenderer.invoke('save-starred', d),
+  loadRecent:      ()    => ipcRenderer.invoke('load-recent'),
+  saveRecent:      (ps)  => ipcRenderer.invoke('save-recent', ps),
+  loadVisited:     ()    => ipcRenderer.invoke('load-visited'),
+  saveVisited:     (d)   => ipcRenderer.invoke('save-visited', d),
+  showInFolder:    (p)   => ipcRenderer.invoke('show-in-folder', p),
+  copyClip:        (t)   => ipcRenderer.invoke('copy-to-clipboard', t),
+  openUrl:         (u)   => ipcRenderer.invoke('open-url', u),
+  winMin:   () => ipcRenderer.send('window-minimize'),
+  winMax:   () => ipcRenderer.send('window-maximize'),
+  winClose: () => ipcRenderer.send('window-close'),
+  winFs:    () => ipcRenderer.send('toggle-fullscreen'),
+});

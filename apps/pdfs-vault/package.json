@@ -1,0 +1,25 @@
+{
+  "name": "pdfs-vault",
+  "version": "1.0.0",
+  "description": "Local PDF Library Browser — Catppuccin Mocha theme",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.catppuccin.pdfs-vault",
+    "productName": "PDFs Vault",
+    "files": ["src/**/*", "assets/**/*"],
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Office",
+      "icon": "assets/icon.png"
+    },
+    "directories": { "output": "dist" }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
