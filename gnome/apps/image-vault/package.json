@@ -1,0 +1,37 @@
+{
+  "name": "image-vault",
+  "version": "1.0.0",
+  "description": "Local image vault — Catppuccin Mocha",
+  "license": "MIT",
+  "author": "Diea Abdeltwab",
+  "homepage": "https://github.com/diea-abdeltwab/local-vaults-suite/tree/main/gnome/apps/image-vault#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diea-abdeltwab/local-vaults-suite.git",
+    "directory": "gnome/apps/image-vault"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux AppImage",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.local.image-vault",
+    "productName": "Image Vault",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Graphics"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "^24.0.0"
+  }
+}

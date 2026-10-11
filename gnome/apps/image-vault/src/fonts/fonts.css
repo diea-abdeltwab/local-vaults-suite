@@ -1,0 +1,7 @@
+/* Bundled locally so the app never needs internet (SIL OFL fonts, see LICENSE.txt) */
+@font-face{font-family:'Orbitron';font-style:normal;font-weight:400;font-display:swap;src:url('orbitron-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Orbitron';font-style:normal;font-weight:500;font-display:swap;src:url('orbitron-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Orbitron';font-style:normal;font-weight:700;font-display:swap;src:url('orbitron-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:300;font-display:swap;src:url('roboto-mono-latin-300-normal.woff2') format('woff2');}
+@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:400;font-display:swap;src:url('roboto-mono-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:500;font-display:swap;src:url('roboto-mono-latin-500-normal.woff2') format('woff2');}

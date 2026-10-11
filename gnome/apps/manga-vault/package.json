@@ -1,0 +1,40 @@
+{
+  "name": "manga-vault",
+  "version": "1.0.0",
+  "description": "Local Manga Reader — Catppuccin Mocha theme",
+  "license": "MIT",
+  "author": "Diea Abdeltwab",
+  "homepage": "https://github.com/diea-abdeltwab/local-vaults-suite/tree/main/gnome/apps/manga-vault#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diea-abdeltwab/local-vaults-suite.git",
+    "directory": "gnome/apps/manga-vault"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.catppuccin.manga-vault",
+    "productName": "Manga Vault",
+    "files": [
+      "src/**/*",
+      "assets/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Graphics",
+      "icon": "assets/icon.png"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "^24.0.0"
+  }
+}
